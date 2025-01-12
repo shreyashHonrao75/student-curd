@@ -14,7 +14,172 @@ crossorigin="anonymous"
 referrerpolicy="no-referrer"
 />
 
-<a href="index.html">
-            alt="Logo"
-            type="Logo"
-            class="logo"></a>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - DOM Events - Submit Event - submit todo task</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mt-5 mb-4 mb-md-0">
+          <form id="StdForm">
+            <div class="form-group">
+              <label for="fname">First name</label>
+              <input type="text"  class="form-control" id="fname" />
+            </div>
+            <div class="form-group">
+                <label for="lname">Last name</label>
+                <input type="text"  class="form-control" id="lname" />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text"  class="form-control" id="email" />
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact</label>
+                <input type="text"  class="form-control" id="contact" />
+            </div>
+           
+
+            <button
+              type="submit"
+              id="submitStdBtn"
+              class="btn btn-sm btn-block btn-outline-info"
+            >
+              Add TODO
+            </button>
+            <button
+              type="button"
+              id="updateStdBtn"
+              class="btn btn-sm btn-block btn-outline-info d-none"
+            >
+              Update TODO
+            </button>
+          </form>
+        </div>
+        <div class="col-md-8 mt-5">
+          
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - DOM Events - Submit Event - submit todo task</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mt-5 mb-4 mb-md-0">
+                <form id="StdForm">
+                    <div class="form-group">
+                      <label for="fname">First name</label>
+                      <input type="text"  class="form-control" id="fname" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last name</label>
+                        <input type="text"  class="form-control" id="lname" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text"  class="form-control" id="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact</label>
+                        <input type="text"  class="form-control" id="contact" />
+                    </div>
+                    <button 
+                       type="sumbit"
+                       id="submitStdBtn"
+                        class="btn btn-sm btn-block btn-outline-info"
+                       >
+                       Add TODO
+                    </button>
+                    <button
+                     type="button"
+                     id="updateStdBtn"
+                     class="btn btn-sm btn-block btn-outline-info d-none"   
+                      >
+                      Update TODO
+                   </button>
+                </form>
+            </div>
+            <div class="div col-md-8">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                     <th>sr No</th>
+                     <th>First Name</th>
+                     <th>Last Name</th>
+                     <th>email</th>
+                     <th>contact</th>
+                     <th>Edit</th>
+                     <th>Remove</th>
+                  </tr>
+                </thead>
+                <tbody id="stdContainer">
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-info">Edit</button>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-info">Remove</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
